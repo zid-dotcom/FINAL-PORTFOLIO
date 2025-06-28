@@ -1,3 +1,332 @@
+
+
+
+
+// import React, { useEffect, useRef } from "react";
+// import { Tilt } from "react-tilt";
+// import { gsap } from "gsap";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+// import { styles } from "../styles";
+// import { github } from "../assets";
+// import { SectionWrapper } from "../hoc";
+// import { projects } from "../constants";
+
+// // Register the GSAP plugin
+// gsap.registerPlugin(ScrollTrigger);
+
+// // ✅ ProjectCard Component
+// const ProjectCard = ({
+//   index,
+//   name,
+//   description,
+//   tags,
+//   image,
+//   source_code_link,
+// }) => {
+//   const cardRef = useRef(null);
+
+//   useEffect(() => {
+//     const el = cardRef.current;
+
+//     gsap.fromTo(
+//       el,
+//       {
+//         opacity: 0,
+//         y: 100,
+//       },
+//       {
+//         opacity: 1,
+//         y: 0,
+//         scrollTrigger: {
+//           trigger: el,
+//           start: "top bottom",
+//           end: "top center",
+//           scrub: true,
+//           markers: false,
+//         },
+//       }
+//     );
+//   }, []);
+
+//   return (
+//     <div ref={cardRef}>
+//       <Tilt
+//         options={{
+//           max: 45,
+//           scale: 1,
+//           speed: 450,
+//         }}
+//         className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full min-h-[520px] flex flex-col justify-between"
+//       >
+//         {/* 🔧 Project Image */}
+//         <div className="relative w-full h-[230px] bg-white rounded-2xl overflow-hidden">
+//           <img
+//             src={image}
+//             alt="project_image"
+//             className="mx-auto w-full h-full object-contain object-center"
+//           />
+
+//           {/* 🔗 GitHub Button */}
+//           <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
+//             <div
+//               onClick={() => window.open(source_code_link, "_blank")}
+//               className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+//             >
+//               <img
+//                 src={github}
+//                 alt="source code"
+//                 className="w-1/2 h-1/2 object-contain"
+//               />
+//             </div>
+//           </div>
+//         </div>
+
+//         {/* 📝 Info */}
+//         <div className="mt-5">
+//           <h3 className="text-white font-bold text-[24px]">{name}</h3>
+//           <p className="mt-2 text-secondary text-[14px]">{description}</p>
+//         </div>
+
+//         {/* 🏷️ Tags */}
+//         <div className="mt-4 flex flex-wrap gap-2">
+//           {tags.map((tag) => (
+//             <p
+//               key={`${name}-${tag.name}`}
+//               className={`text-[14px] ${tag.color}`}
+//             >
+//               #{tag.name}
+//             </p>
+//           ))}
+//         </div>
+//       </Tilt>
+//     </div>
+//   );
+// };
+
+// // ✅ Works Component
+// const Works = () => {
+//   useEffect(() => {
+//     gsap.fromTo(
+//       ".project-card",
+//       {
+//         opacity: 0,
+//         y: 100,
+//       },
+//       {
+//         opacity: 1,
+//         y: 0,
+//         stagger: 0.1,
+//         scrollTrigger: {
+//           trigger: ".works-container",
+//           start: "top bottom",
+//           end: "top center",
+//           scrub: true,
+//           markers: false,
+//         },
+//       }
+//     );
+//   }, []);
+
+//   return (
+//     <>
+//       <div>
+//         <p className={`${styles.sectionSubText}`}>My work</p>
+//         <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
+//       </div>
+
+//       <div className="w-full flex">
+//         <p className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]">
+//           Following projects showcase my skills and experience through real-world examples of my work. Each project is briefly described with links to code repositories. It reflects my ability to solve complex problems, work with different technologies, and manage projects effectively.
+//         </p>
+//       </div>
+
+//       {/* 🧩 Grid */}
+//       <div className="works-container mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-5">
+//         {projects.map((project, index) => (
+//           <div key={`project-${index}`} className="project-card">
+//             <ProjectCard index={index} {...project} />
+//           </div>
+//         ))}
+//       </div>
+//     </>
+//   );
+// };
+
+// // ✅ Export
+// export default SectionWrapper(Works, "");
+
+
+
+
+// import React, { useEffect, useRef } from "react";
+// import { Tilt } from "react-tilt";
+// import { gsap } from "gsap";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+// import { styles } from "../styles";
+// import { github } from "../assets";
+// import { SectionWrapper } from "../hoc";
+// import { projects } from "../constants";
+
+// // Register GSAP plugin
+// gsap.registerPlugin(ScrollTrigger);
+
+// // ✅ ProjectCard Component
+// const ProjectCard = ({
+//   index,
+//   name,
+//   description,
+//   tags,
+//   image,
+//   source_code_link,
+//   live_link, // ✅ Add live link
+// }) => {
+//   const cardRef = useRef(null);
+
+//   useEffect(() => {
+//     const el = cardRef.current;
+
+//     gsap.fromTo(
+//       el,
+//       {
+//         opacity: 0,
+//         y: 100,
+//       },
+//       {
+//         opacity: 1,
+//         y: 0,
+//         scrollTrigger: {
+//           trigger: el,
+//           start: "top bottom",
+//           end: "top center",
+//           scrub: true,
+//           markers: false,
+//         },
+//       }
+//     );
+//   }, []);
+
+//   return (
+//     <div ref={cardRef}>
+//       <Tilt
+//         options={{
+//           max: 45,
+//           scale: 1,
+//           speed: 450,
+//         }}
+//         className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full min-h-[540px] flex flex-col justify-between"
+//       >
+//         {/* 🔧 Project Image */}
+//         <div className="relative w-full h-[230px] bg-white rounded-2xl overflow-hidden">
+//           <img
+//             src={image}
+//             alt="project_image"
+//             className="mx-auto w-full h-full object-contain object-center"
+//           />
+
+//           {/* 🔗 GitHub + Live Demo Buttons */}
+//           <div className="absolute inset-0 flex justify-end items-start m-3 gap-2">
+//             {source_code_link && (
+//               <div
+//                 onClick={() => window.open(source_code_link, "_blank")}
+//                 className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+//               >
+//                 <img
+//                   src={github}
+//                   alt="source code"
+//                   className="w-1/2 h-1/2 object-contain"
+//                 />
+//               </div>
+//             )}
+//             {live_link && (
+//               <div
+//                 onClick={() => window.open(live_link, "_blank")}
+//                 className="bg-white w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+//                 title="Live Demo"
+//               >
+//                 <span className="text-black font-bold text-sm">▶</span>
+//               </div>
+//             )}
+//           </div>
+//         </div>
+
+//         {/* 📝 Info */}
+//         <div className="mt-5">
+//           <h3 className="text-white font-bold text-[24px]">{name}</h3>
+//           <p className="mt-2 text-secondary text-[14px]">{description}</p>
+//         </div>
+
+//         {/* 🏷️ Tags */}
+//         <div className="mt-4 flex flex-wrap gap-2">
+//           {tags.map((tag) => (
+//             <p
+//               key={`${name}-${tag.name}`}
+//               className={`text-[14px] ${tag.color}`}
+//             >
+//               #{tag.name}
+//             </p>
+//           ))}
+//         </div>
+//       </Tilt>
+//     </div>
+//   );
+// };
+
+// // ✅ Works Section
+// const Works = () => {
+//   useEffect(() => {
+//     gsap.fromTo(
+//       ".project-card",
+//       {
+//         opacity: 0,
+//         y: 100,
+//       },
+//       {
+//         opacity: 1,
+//         y: 0,
+//         stagger: 0.1,
+//         scrollTrigger: {
+//           trigger: ".works-container",
+//           start: "top bottom",
+//           end: "top center",
+//           scrub: true,
+//           markers: false,
+//         },
+//       }
+//     );
+//   }, []);
+
+//   return (
+//     <>
+//       <div>
+//         <p className={`${styles.sectionSubText}`}>My work</p>
+//         <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
+//       </div>
+
+//       <div className="w-full flex">
+//         <p className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]">
+//           Following projects showcase my skills and experience through real-world examples of my work. Each project is briefly described with links to code repositories and live demos.
+//         </p>
+//       </div>
+
+//       {/* 🧩 Grid */}
+//       <div className="works-container mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-5">
+//         {projects.map((project, index) => (
+//           <div key={`project-${index}`} className="project-card">
+//             <ProjectCard index={index} {...project} />
+//           </div>
+//         ))}
+//       </div>
+//     </>
+//   );
+// };
+
+// export default SectionWrapper(Works, "");
+
+
+
+
 import React, { useEffect, useRef } from "react";
 import { Tilt } from "react-tilt";
 import { gsap } from "gsap";
@@ -8,9 +337,10 @@ import { github } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 
-// Register ScrollTrigger plugin
+// Register GSAP plugin
 gsap.registerPlugin(ScrollTrigger);
 
+// ✅ ProjectCard Component
 const ProjectCard = ({
   index,
   name,
@@ -18,28 +348,24 @@ const ProjectCard = ({
   tags,
   image,
   source_code_link,
+  live_link, // new prop
 }) => {
   const cardRef = useRef(null);
 
   useEffect(() => {
     const el = cardRef.current;
-
-    // ScrollTrigger for animating project cards with stagger
     gsap.fromTo(
       el,
-      {
-        opacity: 0,
-        y: 100, // Start off-screen
-      },
+      { opacity: 0, y: 100 },
       {
         opacity: 1,
         y: 0,
         scrollTrigger: {
           trigger: el,
-          start: "top bottom",  // Trigger when the top of the element hits the bottom of the viewport
-          end: "top center",    // End when the top reaches the center of the viewport
-          scrub: true,          // Smoothly sync scroll and animation
-          markers: false,       // Set to `true` to see debug markers
+          start: "top bottom",
+          end: "top center",
+          scrub: true,
+          markers: false,
         },
       }
     );
@@ -48,39 +374,61 @@ const ProjectCard = ({
   return (
     <div ref={cardRef}>
       <Tilt
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
+        options={{ max: 45, scale: 1, speed: 450 }}
+        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full min-h-[520px] flex flex-col justify-between"
       >
-        <div className="relative w-full h-[230px]">
+        {/* 🔧 Image Section */}
+        <div className="relative w-full h-[230px] bg-white rounded-2xl overflow-hidden">
           <img
             src={image}
             alt="project_image"
-            className="w-full h-full object-cover object-left rounded-2xl"
+            className="mx-auto w-full h-full object-contain object-center"
           />
 
-          <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
-            <div
-              onClick={() => window.open(source_code_link, "_blank")}
-              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
-            >
-              <img
-                src={github}
-                alt="source code"
-                className="w-1/2 h-1/2 object-contain"
-              />
-            </div>
+          {/* 🔗 Icon Buttons */}
+          <div className="absolute inset-0 flex justify-end items-start m-3 gap-2 card-img_hover">
+            {/* GitHub Button */}
+            {source_code_link && (
+              <div
+                onClick={() => window.open(source_code_link, "_blank")}
+                className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+              >
+                <img
+                  src={github}
+                  alt="source code"
+                  className="w-1/2 h-1/2 object-contain"
+                />
+              </div>
+            )}
+
+            {/* Live Demo Button */}
+            {live_link && (
+              <div
+                onClick={() => window.open(live_link, "_blank")}
+                className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="white"
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                >
+                  <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42L17.59 5H14V3z" />
+                  <path d="M5 5h4V3H5c-1.1 0-2 .9-2 2v4h2V5zM5 19v-4H3v4c0 1.1.9 2 2 2h4v-2H5zM19 19h-4v2h4c1.1 0 2-.9 2-2v-4h-2v4z" />
+                </svg>
+              </div>
+            )}
           </div>
         </div>
 
+        {/* 📝 Info */}
         <div className="mt-5">
           <h3 className="text-white font-bold text-[24px]">{name}</h3>
           <p className="mt-2 text-secondary text-[14px]">{description}</p>
         </div>
 
+        {/* 🏷️ Tags */}
         <div className="mt-4 flex flex-wrap gap-2">
           {tags.map((tag) => (
             <p
@@ -96,25 +444,22 @@ const ProjectCard = ({
   );
 };
 
+// ✅ Works Component
 const Works = () => {
   useEffect(() => {
-    // Stagger effect for project cards
     gsap.fromTo(
-      ".project-card", // Select all project cards
-      {
-        opacity: 0,
-        y: 100,
-      },
+      ".project-card",
+      { opacity: 0, y: 100 },
       {
         opacity: 1,
         y: 0,
-        stagger: 0.1, // Stagger delay of 0.3 seconds between each card
+        stagger: 0.1,
         scrollTrigger: {
           trigger: ".works-container",
-          start: "top bottom",  // Trigger when the top of the container reaches the bottom
+          start: "top bottom",
           end: "top center",
           scrub: true,
-          markers: false, // Set to true to see debug markers
+          markers: false,
         },
       }
     );
@@ -123,13 +468,13 @@ const Works = () => {
   return (
     <>
       <div>
-        <p className={`${styles.sectionSubText}`}>My work</p>
-        <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
+        <p className={styles.sectionSubText}>My work</p>
+        <h2 className={styles.sectionHeadText}>Projects.</h2>
       </div>
 
       <div className="w-full flex">
         <p className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]">
-          Following projects showcase my skills and experience through real-world examples of my work. Each project is briefly described with links to code repositories and live demos. It reflects my ability to solve complex problems, work with different technologies, and manage projects effectively.
+          Following projects showcase my skills and experience through real-world examples of my work. Each project is briefly described with links to code repositories and live demos.
         </p>
       </div>
 

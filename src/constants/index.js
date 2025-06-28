@@ -1,25 +1,23 @@
 
+
+
+
 import {
   logo,
   backend,
-  creator,
-  mobile,
   web,
   github,
   menu,
   close,
   css,
-  gearXpert,
   project2,
   project3,
   mysql,
   express,
   aws,
   mui,
-  
   gsap,
   framer,
-  figma,
   git,
   html,
   javascript,
@@ -29,245 +27,161 @@ import {
   redux,
   tailwind,
   threejs,
-  firstTestimonial,
-  secondTestimonial,
-  thirdTestimonial,
-} from '../assets'
+} from "../assets";
 
+import luminar from "../assets/company/luminar.png";
+import employeeCrud from "../assets/projects/employee-crud.png";
+import studentPortal from "../assets/projects/student-portal.png";
 
-// Import Tekisky separately
-import tekisky from "../assets/company/tekisky.png";
-
-
+// ✅ Navbar Links
 export const navLinks = [
-
-
-  {
-    id: "about",
-    title: "About",
-    
-  },
-  {
-    id: "work",
-    title: "Work",
-  },
-  {
-    id: "contact",
-    title: "Contact",
-  },
+  { id: "about", title: "About" },
+  { id: "work", title: "Work" },
+  { id: "contact", title: "Contact" },
 ];
 
-const services = [
+// ✅ Services
+export const services = [
   {
     title: "Full-Stack Developer",
     icon: web,
   },
   {
     title: "Frontend Developer",
-    icon: mobile,
+    icon: web,
   },
   {
     title: "Backend Developer",
     icon: backend,
   },
   {
-    title: "Ui UX Designer",
-    icon: creator,
-  },
-];
-
-const technologies = [
-  {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
-  {
-    name: "JavaScript",
-    icon: javascript,
-  },
-  {
-    name: "React JS",
-    icon: reactjs,
-  },
-  {
-    name: "gsap",
-    icon: gsap,
-  },
-  {
-    name: "framer",
-    icon: framer,
-  },
-
- 
-  {
-    name: "Three JS",
-    icon: threejs,
-  },
-  {
-    name: "figma",
-    icon: figma,
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
-    name: "Material Ui",
-    icon: mui,
-  },
-  {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "Express Js",
-    icon: express,
-  },
-  {
-    name: "AWS",
-    icon: aws,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
-  {
-    name: "MySql",
-    icon: mysql,
-  },
-
-  {
-    name: "git",
+    title: "Version Control & Deployment Using Git/GitHub",
     icon: git,
   },
- 
-
 ];
 
-const experiences = [
+// ✅ Technologies
+export const technologies = [
+  { name: "HTML 5", icon: html },
+  { name: "CSS 3", icon: css },
+  { name: "JavaScript", icon: javascript },
+  { name: "React JS", icon: reactjs },
+  { name: "Redux Toolkit", icon: redux },
+  { name: "Tailwind CSS", icon: tailwind },
+  { name: "Bootstrap", icon: mui },
+  { name: "Node JS", icon: nodejs },
+  { name: "Express JS", icon: express },
+  { name: "MongoDB", icon: mongodb },
+  { name: "MySQL", icon: mysql },
+  { name: "Git", icon: git },
+  { name: "GSAP", icon: gsap },
+  { name: "Framer Motion", icon: framer },
+  { name: "Three JS", icon: threejs },
+  { name: "AWS", icon: aws },
+];
+
+// ✅ Experience
+export const experiences = [
   {
-    title: "Full-Stack Developer",
-    company_name: "Tekisky",
-    icon: tekisky,
+    title: "MERN Stack Developer Intern",
+    company_name: "Luminar Technolab, Calicut",
+    icon: luminar,
     iconBg: "#383E56",
-    date: "Jan 2023 - present",
+    date: "March 2025 – Present",
     points: [
-      "Developing and maintaining web applications using MERN technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Developed full-stack apps using MongoDB, Express.js, React.js, and Node.js.",
+      "Built projects like Student Portal and Employee Manager with full CRUD functionality.",
+      "Used Redux Toolkit, image upload, API integration, and chart visualizations.",
+      "Deployed projects on Vercel (frontend) and Render (backend).",
+      "Collaborated using Git/GitHub and participated in peer code reviews.",
     ],
   },
 ];
 
-const testimonials = [
+// ✅ Testimonials
+export const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Huzaif proved me wrong.",
-    name: "MD Mustaqeem",
-    designation: "Ecommerce",
-    company: "QuickMart",
-    image: firstTestimonial,
+      "Sidharth's projects reflect strong fundamentals in full-stack development. His skills in React and Node.js stood out clearly.",
+    name: "Mentor",
+    designation: "Lead Trainer",
+    company: "Luminar Technolab",
+    image: "https://randomuser.me/api/portraits/men/75.jpg",
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Huzaif does.",
-    name: "Abdul Raheman",
-    designation: "Ecommerce Business",
-    company: "justbuyz",
-    image: secondTestimonial,
+      "Sidharth has shown excellent growth as a developer. His understanding of MERN stack and real-world project handling is commendable.",
+    name: "Senior Developer",
+    designation: "Tech Team",
+    company: "Luminar Technolab",
+    image: "https://randomuser.me/api/portraits/men/76.jpg",
   },
   {
     testimonial:
-      "After Huzaif optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "James Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: thirdTestimonial,
+      "Great communication and problem-solving mindset. He's a team player and always ready to learn and contribute.",
+    name: "Instructor",
+    designation: "Technical Mentor",
+    company: "Luminar Technolab",
+    image: "https://randomuser.me/api/portraits/women/65.jpg",
   },
 ];
 
-const projects = [
+// ✅ Projects
+export const projects = [
   {
-    name: "Tekisky Mart",
+    name: "Redux Shopping Cart",
     description:
-      "Tekisky Mart is a web-based platform that allows users to search, explore, and purchase a wide range of products from various providers, offering a seamless and efficient shopping experience.",
+      "A functional shopping cart application built using React and Redux Toolkit. Supports add to cart, quantity change, total price calculation, and responsive UI.",
     tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "white-text-gradient",
-      },
-      {
-        name: "node",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
- 
+      { name: "React", color: "blue-text-gradient" },
+      { name: "ReduxToolkit", color: "green-text-gradient" },
+      { name: "Bootstrap5", color: "pink-text-gradient" },
     ],
     image: project2,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/zid-dotcom/redux-cart",
+    live_link: "https://redux-cart-tau-weld.vercel.app/",
   },
   {
-    name: "GearXpert",
+    name: "Employee Manager Dashboard",
     description:
-      "GearXpert is your ultimate destination for premium auto parts and accessories, Whether you're an automobile enthusiast or a professional, find everything you need to upgrade, repair.",
+      "An employee management dashboard with CRUD features, image uploads, Redux Toolkit integration, and real-time pie chart updates. Built with React, Bootstrap 5, and deployed on Vercel.",
     tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "emailJs",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Gsap",
-        color: "pink-text-gradient",
-      },
+      { name: "React", color: "blue-text-gradient" },
+      { name: "ReduxToolkit", color: "green-text-gradient" },
+      { name: "Bootstrap5", color: "pink-text-gradient" },
     ],
-    image: gearXpert,
-    source_code_link: "https://github.com/",
+    image: employeeCrud,
+    source_code_link: "https://github.com/zid-dotcom/employee-crud",
+    live_link: "https://emply-crud.vercel.app/", // ✅ FIXED
   },
   {
-    name: "GoGroove-Ecommerce",
+    name: "Student Portal",
     description:
-      "Go-Groove is your ultimate destination for premium products across various categories. Whether you're a savvy shopper or a professional, enhance, and simplify your lifestyle—all in one place!",
+      "A responsive student management CRUD app using React and JSON Server with full add/edit/delete/search features. Frontend on Vercel, backend on Render.",
     tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "express",
-        color: "white-text-gradient",
-      },
-      {
-        name: "node",
-        color: "green-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
+      { name: "React", color: "blue-text-gradient" },
+      { name: "JSON Server", color: "green-text-gradient" },
+      { name: "Bootstrap5", color: "pink-text-gradient" },
+    ],
+    image: studentPortal,
+    source_code_link: "https://github.com/zid-dotcom/student-portal",
+    live_link: "https://student-portal-orcin-nu.vercel.app/", // ✅ FIXED
+  },
+  {
+    name: "Parallax Website",
+    description:
+      "A visually attractive parallax scrolling website built with HTML and CSS. Features layered background effects and smooth transitions for an engaging user experience.",
+    tags: [
+      { name: "HTML", color: "blue-text-gradient" },
+      { name: "CSS", color: "green-text-gradient" },
+      { name: "Parallax", color: "pink-text-gradient" },
     ],
     image: project3,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/zid-dotcom/parallax-website",
+    live_link: "https://parallax-website-rho-pearl.vercel.app/",
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+
+
+
