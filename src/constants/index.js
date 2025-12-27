@@ -15,7 +15,7 @@ import {
   mysql,
   express,
   aws,
-  mui,
+  bs5,
   gsap,
   framer,
   git,
@@ -32,6 +32,9 @@ import {
 import luminar from "../assets/company/luminar.png";
 import employeeCrud from "../assets/projects/employee-crud.png";
 import studentPortal from "../assets/projects/student-portal.png";
+import project_fare from "../assets/projects/project_fare.png"
+import appointment_booking from "../assets/projects/appointmentbooking.png"
+
 
 // ✅ Navbar Links
 export const navLinks = [
@@ -68,16 +71,16 @@ export const technologies = [
   { name: "React JS", icon: reactjs },
   { name: "Redux Toolkit", icon: redux },
   { name: "Tailwind CSS", icon: tailwind },
-  { name: "Bootstrap", icon: mui },
+  { name: "Bootstrap", icon: bs5 },
   { name: "Node JS", icon: nodejs },
   { name: "Express JS", icon: express },
   { name: "MongoDB", icon: mongodb },
-  { name: "MySQL", icon: mysql },
+  // { name: "MySQL", icon: mysql },
   { name: "Git", icon: git },
-  { name: "GSAP", icon: gsap },
-  { name: "Framer Motion", icon: framer },
-  { name: "Three JS", icon: threejs },
-  { name: "AWS", icon: aws },
+  // { name: "GSAP", icon: gsap },
+  // { name: "Framer Motion", icon: framer },
+  // { name: "Three JS", icon: threejs },
+  // { name: "AWS", icon: aws },
 ];
 
 // ✅ Experience
@@ -180,6 +183,37 @@ export const projects = [
     source_code_link: "https://github.com/zid-dotcom/parallax-website",
     live_link: "https://parallax-website-rho-pearl.vercel.app/",
   },
+  {
+  name: "Project Fare",
+  description:
+    "A full-stack project management application with secure user authentication using JWT. Users can register, log in, and manage their own projects with add, edit, and update functionality. Built with a responsive UI using Bootstrap 5 and a modern MERN stack architecture.",
+  tags: [
+    { name: "React", color: "blue-text-gradient" },
+    { name: "Bootstrap5", color: "pink-text-gradient" },
+    { name: "NodeJS", color: "green-text-gradient" },
+  ],
+  image: project_fare,
+  source_code_link: "https://github.com/zid-dotcom/pf-front-updated",
+  live_link: "https://pf-front-updated.vercel.app/",
+},
+{
+  name: "Doctor Appointment Booking System",
+  
+  description:
+    "A complete MERN stack doctor appointment booking application with role-based authentication for users, doctors, and admin. Users can register, log in, book appointments, make online payments via Razorpay, and cancel appointments. Admin can manage doctors and appointments, while doctors can view and update their schedules. Built with secure JWT authentication and a responsive UI.",
+  tags: [
+    { name: "React", color: "blue-text-gradient" },
+    { name: "NodeJS", color: "green-text-gradient" },
+    { name: "MongoDB", color: "pink-text-gradient" },
+    { name: "JWT", color: "orange-text-gradient" },
+    { name: "Razorpay", color: "purple-text-gradient" },
+  ],
+  image: appointment_booking,
+  source_code_link: "https://github.com/zid-dotcom/Appointment_booking_frontend",
+  live_link: "https://appointment-booking-frontend-e2bz.vercel.app/",
+}
+
+
 ];
 
 
